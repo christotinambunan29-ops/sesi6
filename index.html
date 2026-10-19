@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Validation Form</title>
+</head>
+<body>
+  <main class="card">
+    <header class="card-head">
+      <h1>Create your account</h1>
+      <p>Fill in the form below. Every field is required.</p>
+    </header>
+
+    <form id="regForm">
+      <div class="field">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your name">
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+      </div>
+
+      <div class="field">
+        <span class="label">Gender</span>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="gender" value="Male"> Male</label>
+          <label class="choice"><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="label">Hobbies / interests</span>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="hobbies" value="Reading"> Reading</label>
+          <label class="choice"><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
+          <label class="choice"><input type="checkbox" name="hobbies" value="Music"> Music</label>
+          <label class="choice"><input type="checkbox" name="hobbies" value="Gaming"> Gaming</label>
+          <label class="choice"><input type="checkbox" name="hobbies" value="Traveling"> Traveling</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="">Select a country</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Philippines">Philippines</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <p class="error" id="formError" aria-live="polite"></p>
+
+      <button type="submit" class="submit">Create account</button>
+    </form>
+
+    <section id="success" class="success" hidden>
+      <h2>Registration successful</h2>
+      <p>Here is the data you submitted:</p>
+      <dl id="summary"></dl>
+      <button type="button" id="reset" class="submit">Fill the form again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
